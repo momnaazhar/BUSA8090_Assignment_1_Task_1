@@ -1,0 +1,5 @@
+#!/bin/bash
+# save as older.sh
+# This script returns the oldest file in the list
+older="$(ls -lt | grep -v '^d' | tail -1 | awk '{print $NF}')"
+echo "Oldest file is  $older"
